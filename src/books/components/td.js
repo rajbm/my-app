@@ -14,7 +14,7 @@ class Td extends Component {
             <tr>
                 <td>{this.props.book.name}</td>
                 <td>{this.props.book.description.substring(0,75)+"..."}</td>
-                <td className="text-center"><NavLink to={"/books/"+this.props.book.id} className="btn btn-primary btn-xs"><span className="glyphicon glyphicon-edit"></span> show</NavLink></td>
+                <td className="text-center"><NavLink to={"/books/"+this.props.book.id} className="btn btn-primary btn-xs"><span className="glyphicon glyphicon-eye-open"></span> show</NavLink></td>
                 <td className="text-center">
                     <button className="btn btn-danger btn-xs" onClick={this.deleteBook} ><span className="glyphicon glyphicon-trash"></span> Delete</button>
                 </td> 

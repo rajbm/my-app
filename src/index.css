@@ -214,14 +214,50 @@ h1, h2,h3,h4,h5, h6, p {
   margin-right: 0px;
 }
 .card {
-  width: 20%;
+  width: 23.6%;
+  display: inline-block;
   background-color: #fff;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
   border-radius: 2px;
+  vertical-align: top;
+  margin-right: 15px;
+  margin-bottom: 15px;
 }
 .card img {
   width: 100%;
 }
 .card-body {
   padding: 15px;
+}
+.card-title {
+    margin-bottom: 10px;
+    color: #000; 
+    font-size: 14px;
+    font-weight: 600;
+}
+.card-text{
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 13px;
+}
+.btn.search_btn {
+    box-shadow: none;
+}
+.add_book_icon {
+    width: auto !important;
+    text-align: center;
+    display: inline-block;
+    padding: 13px;
+    cursor: pointer;
+}
+.add_book_icon span {
+    float: right;
+    color: #5cb85c;
+    font-size: 17px;
+} 
+.authors_list_block {
+    display: flex;
+}
+.authors_list_block p {
+    width: 100%;
 }

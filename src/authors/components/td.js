@@ -19,7 +19,7 @@ class Td extends Component {
         this.setState({showForm: false})
     }
     deleteAuthor=()=> {
-        // this.props.deleteAuthor(this.props.author.id, this.props.history)
+        this.props.deleteAuthor(this.props.author.id, this.props.history)
     }
     
     render() {

@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import {getBooks, searchBooks, searchBooksAuthors, searchAuthorBooks, deleteBook} from './action';
+import {getBooks, searchBooks, searchBooksAuthors, searchAuthorBooks, deleteBook } from './action';
+import { createAuthor, addBook } from '../authors/action.js'
 // import { NavLink } from 'react-router-dom';
 import  BooksTable from './components/booktable.js'
 import  SearchForm from './components/searchform.js'
 import AutorList from './components/authorlist'
+import NewAuthorForm from '../authors/new.js'
 
 class Books extends Component {
   componentDidMount() {
@@ -15,6 +17,7 @@ class Books extends Component {
   render() {
     return (
 		<div className="container">
+			<NewAuthorForm createAuthor={this.props.createAuthor} />
 			<div className="well">
 				<div className="row">
 					<div className="col-md-8"> 
@@ -34,7 +37,7 @@ class Books extends Component {
 					<h4 className="list_heading" >Authors<span className="badge">{this.props.authors.length}</span></h4>
 					<SearchForm searchBooks={this.props.searchBooksAuthors} getBooks={this.props.getBooks}/>
 					<br/>
-					<AutorList authors={this.props.authors} searchAuthorBooks={this.props.searchAuthorBooks}/>
+					<AutorList authors={this.props.authors} addBook={this.props.addBook} searchAuthorBooks={this.props.searchAuthorBooks}/>
 				</div>
 				<div className="col-md-9" ><BooksTable books={this.props.books} deleteBook={this.props.deleteBook}/></div>
 			</div>
@@ -52,6 +55,6 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({getBooks, searchBooks, searchBooksAuthors, searchAuthorBooks,deleteBook},dispatch)
+  return bindActionCreators({getBooks, searchBooks, searchBooksAuthors, searchAuthorBooks,deleteBook, createAuthor, addBook},dispatch)
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Books);

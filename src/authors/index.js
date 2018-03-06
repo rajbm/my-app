@@ -18,8 +18,6 @@ class Authors extends Component {
     console.log(this.props)
     return (
       <div className="container">
-      <div className="row">
-      </div>
       <NewAuthorForm createAuthor={this.props.createAuthor} />
       
       <br/>

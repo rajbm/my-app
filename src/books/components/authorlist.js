@@ -1,18 +1,19 @@
-
-
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
-
+import List from './list'
 class AutorList extends Component {
 
-    searchAuthor(id){
-        this.props.searchAuthorBooks(id)
-    }
+    
     render() {
         // console.log()
         const authors = this.props.authors && this.props.authors.map((author,i)=>{
             return(
-                <p className="list-group-item list_link" key={i} onClick={()=>this.searchAuthor(author.id)} >{author.name}</p>
+                <List key={i} author={author} addBook={this.props.addBook} searchAuthorBooks={this.props.searchAuthorBooks} />
+                // <div className="authors_list_block" key={i}>
+                //     <p className="list-group-item list_link"  onClick={()=>this.searchAuthor(author.id)} >
+                //         {author.name}
+                //     </p>
+                //     <p className="add_book_icon"><span className="glyphicon glyphicon-plus-sign" ></span></p>
+                // </div>
             )      
         })
         return (

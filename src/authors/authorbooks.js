@@ -10,9 +10,11 @@ class AuthorBooks extends Component {
     }
 
     render() {
-        console.log(this.props.authorBooks)
+        // console.log(this.props.authorBooks)
         return (
-            <AuthorBooksCard />
+            <div className="container">
+                <AuthorBooksCard authorBooks={this.props.authorBooks} />
+            </div>
         )
     } 
 }

@@ -8,16 +8,12 @@ class Book extends Component {
   componentDidMount() {
     this.props.showBook(this.props.match.params.id);
   }
+  goBack = () => {
+    this.props.history.goBack()
+  }
   render() {
-    // console.log(this.props.match.params.id);
+    // console.log();
     return (
-      // <div className="App">
-      // <div>show page</div>
-      // <NavLink to="/">home</NavLink>
-      //   <h3>{this.props.author.page_count}</h3>
-      //   <h3>{this.props.author.name}</h3>
-      //   <p>{this.props.author.description}</p>
-      // </div>
       <div className="container" >
         <div className="row" >
         <div className="col-md-4" ></div>
@@ -26,7 +22,13 @@ class Book extends Component {
             <div className="panel-heading"><b>{this.props.author.name}</b></div>
             <div className="panel-body">{this.props.author.description}</div>
           </div>
+          <div className="text-center">
+            <button className="btn btn-warning btn-md" onClick={this.goBack} >
+              <span className="glyphicon glyphicon-arrow-left"></span> Go back
+            </button>
+          </div>
         </div>
+        
         <div className="col-md-4" ></div>
         </div>
       </div>

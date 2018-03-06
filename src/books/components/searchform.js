@@ -20,7 +20,7 @@ class SearchForm extends Component {
     showSubmitBtn() {
         if(this.state.searchVal===""){
             return(
-                <button className="btn btn-default" onClick={this.showAllBooks}>
+                <button className="btn btn-default search_btn" onClick={this.showAllBooks}>
                     <i className="glyphicon glyphicon-search"></i>
                 </button>
             )
@@ -28,7 +28,7 @@ class SearchForm extends Component {
         else
         {
             return(
-                <button className="btn btn-default" onClick={this.search}>
+                <button className="btn btn-default search_btn" onClick={this.search}>
                     <i className="glyphicon glyphicon-search"></i>
                 </button>
             )

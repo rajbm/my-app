@@ -82,6 +82,7 @@ export function createAuthor(authordata, history) {
         .then(function (response) {
             console.log(response)
             history.replace('/');
+            history.replace('/authors');
         })
         .catch(function (error) {
             console.log(error);
@@ -113,6 +114,7 @@ export function addBook(book, history) {
         })
         .then(function (response) {
             console.log(response.data)
+            history.replace('/books')
             history.replace('/')
             // dispatch({
             //     type: "UN_SET_LOADER",
