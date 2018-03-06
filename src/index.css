@@ -1,0 +1,227 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+h1, h2,h3,h4,h5, h6, p {
+  margin: 0;
+}
+.navbar {
+  border-radius: 0px;
+  border: 0px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+.active_link {
+  color: yellow !important;
+  border-bottom: 3px solid yellow
+}
+.nav>li>a {
+  font-weight: 600;
+  color: #fff;
+}
+.navbar-inverse .navbar-nav>li>a {
+  color: #fff;
+}
+.navbar-inverse .navbar-brand {
+  color: yellow;
+  font-weight: bold;
+}
+.btn {
+  border-radius: 0px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+#loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: #fff;
+}
+.loader {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.item {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+.item-1 {
+  background-color: #FA5667;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  animation: item-1_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+}
+
+.item-2 {
+  background-color: #7A45E5;
+  top: 0;
+  right: 0;
+  animation: item-2_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+}
+
+.item-3 {
+  background-color: #1B91F7;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  animation: item-3_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+}
+
+.item-4 {
+  background-color: #FAC24C;
+  bottom: 0;
+  left: 0;
+  animation: item-4_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+}
+
+@keyframes item-1_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(0, 100px)} 
+  50% {transform: translate(100px, 100px)} 
+  75% {transform: translate(100px, 0)} 
+}
+
+@keyframes item-2_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(-100px, 0)} 
+  50% {transform: translate(-100px, 100px)} 
+  75% {transform: translate(0, 100px)} 
+}
+
+@keyframes item-3_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(0, -100px)} 
+  50% {transform: translate(-100px, -100px)} 
+  75% {transform: translate(-100px, 0)} 
+}
+
+@keyframes item-4_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(100px, 0)} 
+  50% {transform: translate(100px, -100px)} 
+  75% {transform: translate(0, -100px)} 
+}
+
+.spinner {
+  margin: 18% auto;
+  height: 28px;
+  width: 28px;
+  animation: rotate 0.8s infinite linear;
+  border: 8px solid #ff5722;
+  border-right-color: transparent;
+  border-radius: 50%;
+}
+
+@keyframes rotate {
+  0%    { transform: rotate(0deg); }
+  100%  { transform: rotate(360deg); }
+}
+#new_form {
+  background:  gray;
+  padding: 25px;
+}
+.form-group {
+  margin-bottom: 0;
+}
+#new_form .form-group input {
+  border: 0px;
+  border-radius: 0px;
+}
+.list_link {
+  cursor: pointer;
+}
+.list_link:hover {
+  background: whitesmoke;
+}
+
+#book_form {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* background: red; */
+  overflow: hidden;
+  z-index: 999;
+}
+
+#new_book_form {
+  width: 54%;
+  margin: 150px auto;
+  background: #ffff;
+  padding: 30px;
+  overflow: hidden;
+  border: 1px solid  rgb(190, 190, 190);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px;
+}
+.formOverlay {
+  position: absolute;
+  width: 100%;
+  background: hsla(0, 0%, 100%, 0.82);
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.form-control {
+  border-radius: 0;
+}
+.heading {
+  margin-bottom: 20px; 
+  text-align: left;
+  color: #8a8a8a;
+}
+.close-form-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.close-form-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #ff000063;
+  cursor: pointer;
+  padding: 10px;
+}
+.close-form-icon:hover {
+  color: red;
+}
+.badge {
+  margin-left: 10px;
+}
+.list_heading {
+  font-weight: 600;
+  background: #545454;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  color: #fff;
+  font-size: 16px;
+}
+.list_heading .badge {
+  color: yellow;
+  float: right;
+}
+.navbar-right {
+  margin-right: 0px;
+}
+.card {
+  width: 20%;
+  background-color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+  border-radius: 2px;
+}
+.card img {
+  width: 100%;
+}
+.card-body {
+  padding: 15px;
+}
